@@ -1,13 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Slider from 'react-slick';
-<<<<<<< HEAD
 import { FaLinkedin, FaInstagram, FaGithub, FaWhatsapp, FaExternalLinkAlt } from 'react-icons/fa';
 import profileImage from './assets/profile.jpg';
-=======
-import { FaLinkedin, FaInstagram, FaGithub, FaWhatsapp } from 'react-icons/fa';
-import profileImage from './assets/Profile.jpg';
->>>>>>> 746495b712c46a858f78e56d25f3a771e1e6842d
 import ProjectImage1 from './assets/Project1.png';
 import ProjectImage2 from './assets/Project2.png';
 import ProjectImage3 from './assets/Project3.png';
