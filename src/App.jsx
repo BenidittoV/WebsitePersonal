@@ -1,31 +1,37 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 import Slider from 'react-slick';
+<<<<<<< HEAD
+import { FaLinkedin, FaInstagram, FaGithub, FaWhatsapp, FaExternalLinkAlt } from 'react-icons/fa';
+import profileImage from './assets/profile.jpg';
+=======
 import { FaLinkedin, FaInstagram, FaGithub, FaWhatsapp } from 'react-icons/fa';
 import profileImage from './assets/Profile.jpg';
+>>>>>>> 746495b712c46a858f78e56d25f3a771e1e6842d
 import ProjectImage1 from './assets/Project1.png';
 import ProjectImage2 from './assets/Project2.png';
 import ProjectImage3 from './assets/Project3.png';
 import ProjectImage4 from './assets/Project4.png';
+import ProjectImage5 from './assets/Project5.png';
+import ProjectImage6 from './assets/Project6.png';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const App = () => {
-  const projects = [
+ const projects = [
     {
       name: 'Reusemart',
       url: '',
       description: 'An online platform for buying and selling second-hand goods.',
       image: ProjectImage1,
-      languages: ['React JS', 'Flutter', 'MySQL', 'Laravel'],
+      languages: ['React JS', 'Flutter', 'MySQL', 'Laravel', 'Bootstrap'],
     },
     {
       name: 'IniHotel',
       url: '',
       description: 'A hotel booking website enabling users to search, compare, and reserve accommodations.',
       image: ProjectImage2,
-      languages: ['Laravel', 'MySQL'],
+      languages: ['Laravel', 'Bootstrap', 'MySQL'],
     },
     {
       name: 'Atma Travel',
@@ -36,10 +42,24 @@ const App = () => {
     },
     {
       name: 'Image Mussroom Classification',
-      url: '',
+      url: 'https://proyek-uas-pmdpmah2o-jundqxd4grrfhkqpcuwtxf.streamlit.app/',
       description: 'A mushroom classification system powered by image recognition and machine learning.',
       image: ProjectImage4,
       languages: ['Python', 'CNN'],
+    },
+    {
+      name: 'Lost & Tracker Item - Frontend Prototype',
+      url: 'https://lost-found-five-chi.vercel.app/',
+      description: 'A prototype frontend web that helps users locate nearby ATMs, check their cash availability status, and see real-time crowd levels.',
+      image: ProjectImage5,
+      languages: ['Typescript', 'React', 'Tailwind'],
+    },
+    {
+      name: 'ATM Availability & Crowd Tracker - Frontend Prototype',
+      url: 'https://atm-finder-web.vercel.app/',
+      description: '•	A prototype website to help Garuda Indonesia passengers report, search, and track lost items during flights.',
+      image: ProjectImage6,
+      languages: ['Typescript', 'React', 'Tailwind'],
     },
   ];
 
@@ -180,30 +200,48 @@ const App = () => {
             viewport={{ once: true }}
           >
             <Slider {...sliderSettings}>
-              {projects.map((project, index) => (
-                <motion.div
-                  key={index}
-                  variants={fadeInUp}
-                  className="px-2"
-                >
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="relative bg-gray-900/60 p-5 rounded-lg shadow-[0_0_10px_rgba(59,130,246,0.2)] hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] transition duration-500 group overflow-hidden"
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-blue-800/10 opacity-0 group-hover:opacity-100 transition duration-500"></div>
-                    <img
-                      src={project.image}
-                      alt={project.name}
-                      className="sm:max-w-full object-cover rounded-md mb-4 relative z-10"
-                    />
-                    <h4 className="text-lg font-medium text-blue-400 relative z-10">{project.name}</h4>
-                    <p className="text-gray-300 mt-2 relative z-10">{project.description}</p>
-                    <p className="text-gray-400 mt-2 relative z-10">Languages: {project.languages.join(', ')}</p>
-                  </a>
-                </motion.div>
-              ))}
+              {projects.map((project, index) => {
+                const hasLink = Boolean(project.url && project.url.trim());
+                return (
+                  <motion.div key={index} variants={fadeInUp} className="px-2">
+                    {/* Ubah wrapper jadi <div>, bukan <a> supaya kartu tetap valid saat url kosong */}
+                    <div
+                      className="relative bg-gray-900/60 p-5 rounded-lg shadow-[0_0_10px_rgba(59,130,246,0.2)] hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] transition duration-500 group overflow-hidden h-full"
+                      role="group"
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-blue-800/10 opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+                      {hasLink && (
+                        <span className="absolute right-3 top-3 inline-flex items-center gap-1 text-[10px] uppercase tracking-wider bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full">
+                          Live <FaExternalLinkAlt className="inline-block" />
+                        </span>
+                      )}
+
+                      <img
+                        src={project.image}
+                        alt={`${project.name} screenshot`}
+                        className="sm:max-w-full w-full object-cover rounded-md mb-4 relative z-10"
+                      />
+
+                      <h4 className="text-lg font-medium text-blue-400 relative z-10">{project.name}</h4>
+                      <p className="text-gray-300 mt-2 relative z-10">{project.description}</p>
+                      <p className="text-gray-400 mt-2 relative z-10">Languages: {project.languages.join(', ')}</p>
+
+                      {/* Tampilkan link DI BAWAH Languages hanya jika url ada */}
+                      {hasLink && (
+                        <a
+                          href={project.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="relative z-10 mt-3 inline-flex items-center gap-2 text-blue-300 hover:text-blue-200 underline decoration-dotted underline-offset-4 focus:outline-none focus:ring-2 focus:ring-blue-500/50 rounded px-1"
+                        >
+                          Visit project <FaExternalLinkAlt aria-hidden="true" />
+                        </a>
+                      )}
+                    </div>
+                  </motion.div>
+                );
+              })}
             </Slider>
           </motion.div>
         </div>
@@ -274,6 +312,7 @@ const App = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-blue-400 transition duration-300"
+                aria-label={social.name}
               >
                 <social.icon className="w-8 h-8" />
               </motion.a>
