@@ -71,19 +71,19 @@ window.portfolioData = {
     {
       id: 'mushroom',
       number: '04',
-      title: 'Mushroom Type Prediction',
-      eyebrow: 'Machine Learning course · Group project',
-      role: 'Machine Learning Developer',
-      year: '2024',
-      summary: 'An image-classification application that identifies mushroom types using more than 1,500 images collected and labeled by the team.',
-      contribution: 'I implemented and trained the AlexNet model, helped inspect and preprocess the dataset, and contributed to the Streamlit deployment so users could upload an image and receive a prediction through a usable interface.',
-      learned: 'I learned that model performance depends on consistent labels, clean data, and proper preprocessing—not only the network architecture. The project covered the workflow from dataset preparation to application deployment.',
-      stack: ['Python', 'AlexNet', 'Image classification', 'Streamlit'],
+      title: 'Fine-Tunned LLM for Multi-Label E-Commerce Review Classification',
+      eyebrow: 'Undergraduate Thesis · Individual project',
+      role: 'Machine Learning / NLP Engineer',
+      year: '2026',
+      summary: 'Fine-tuned IndoBERT and mBERT to automatically identify multiple aspects in Shopee and Tokopedia product reviews.',
+      contribution: 'Fine-tuned IndoBERT and mBERT models, prepared and processed annotated review datasets, conducted model evaluation, and developed a Streamlit application for interactive multi-label aspect classification.',
+      learned: 'Gained practical experience in Transformer-based NLP, LLM fine-tuning, multi-label classification, dataset preparation, model evaluation, and deploying machine learning models through Python and Streamlit for real-world applications.',
+      stack: ['Python', 'LLM', 'Streamlit', 'Transformers'],
       accent: 'amber',
       layout: 'single',
       images: ['assets/images/projects/mushroom/streamlit.jpeg'],
       links: [
-        { label: 'Streamlit application', href: 'https://proyek-uas-pmdpmah2o-jundqxd4grrfhkqpcuwtxf.streamlit.app/' },
+        { label: 'Streamlit application', href: 'https://tugasakhir-ws5fxyln7zobftprnzhn7o.streamlit.app/' },
         { label: 'GitHub repository', href: 'https://github.com/Vita210/Proyek-UAS-PMDPM_A_H2O.git' }
       ]
     },
