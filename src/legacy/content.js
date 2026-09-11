@@ -71,7 +71,7 @@ window.portfolioData = {
     {
       id: 'mushroom',
       number: '04',
-      title: 'Fine-Tunned LLM for Multi-Label E-Commerce Review Classification',
+      title: 'Fine-Tunned LLM for Review Classification',
       eyebrow: 'Undergraduate Thesis · Individual project',
       role: 'Machine Learning / NLP Engineer',
       year: '2026',
