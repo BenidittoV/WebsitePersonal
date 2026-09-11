@@ -117,7 +117,7 @@ const rawPageMarkup = String.raw`<a class="skip-link" href="#main">Skip to conte
 </div>
 </div>
 <div aria-label="Portfolio statistics" class="stats-grid">
-<article class="stat-card"><span class="stat-number" data-decimals="2" data-target="3.61">0.00</span><small>GPA / 4.00</small><p>Bachelor’s Degree in Informatics</p></article>
+<article class="stat-card"><span class="stat-number" data-decimals="2" data-target="3.62">0.00</span><small>GPA / 4.00</small><p>Bachelor’s Degree in Informatics</p></article>
 <article class="stat-card"><span class="stat-number" data-pad="2" data-target="2">00</span><small>Internships</small><p>QC, product interface, testing, and web development</p></article>
 <article class="stat-card"><span class="stat-number" data-pad="2" data-target="5">00</span><small>Featured projects</small><p>Web, mobile, machine learning, and Web3</p></article>
 <article class="stat-card"><span class="stat-number" data-pad="2" data-target="3">00</span><small>Competition experiences</small><p>Web3, cybersecurity, and game development</p></article>
@@ -194,8 +194,8 @@ const rawPageMarkup = String.raw`<a class="skip-link" href="#main">Skip to conte
 <div class="education-summary">
 <p class="education-label">Bachelor’s Degree in Informatics</p>
 <h2 id="education-title">Universitas Atma Jaya Yogyakarta</h2>
-<div aria-label="GPA 3.61 out of 4.00" class="education-score">
-<strong>3.61</strong><span>GPA / 4.00</span>
+<div aria-label="GPA 3.62 out of 4.00" class="education-score">
+<strong>3.62</strong><span>GPA / 4.00</span>
 </div>
 </div>
 </article>
